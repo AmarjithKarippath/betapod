@@ -1,14 +1,14 @@
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:5173";
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://apptest.example.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://betapod.io";
 
 const FAQS = [
   {
     q: "Why do I need 12 testers for 14 days?",
-    a: "Google Play now requires personal-account developers to run a closed testing track with at least 12 active testers for 14 continuous days before opting in to production. AppTest helps you find those testers quickly.",
+    a: "Google Play now requires personal-account developers to run a closed testing track with at least 12 active testers for 14 continuous days before opting in to production. BetaPod helps you find those testers quickly.",
   },
   {
     q: "Is this free?",
-    a: "Yes. AppTest is free for both posting testing requests and enrolling as a tester. The marketplace works because everyone benefits from mutual help.",
+    a: "Yes. BetaPod is free for both posting testing requests and enrolling as a tester. The marketplace works because everyone benefits from mutual help.",
   },
   {
     q: "How do testers get my app?",
@@ -51,7 +51,7 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "AppTest",
+    name: "BetaPod",
     url: SITE_URL,
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Web",
@@ -130,7 +130,7 @@ export default function HomePage() {
       </section>
 
       <section className="max-w-3xl mx-auto px-4 sm:px-6 py-16">
-        <h2 className="text-3xl font-bold text-slate-900">Why AppTest</h2>
+        <h2 className="text-3xl font-bold text-slate-900">Why BetaPod</h2>
         <ul className="mt-6 space-y-4 text-slate-700">
           <li className="flex gap-3">
             <span className="text-brand-600">✓</span>

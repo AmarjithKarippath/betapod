@@ -11,16 +11,16 @@ Internet → CloudPanel (nginx + Let's Encrypt) → 127.0.0.1:<port> → contain
 
 | Subdomain                  | CloudPanel proxies to | Container |
 |----------------------------|-----------------------|-----------|
-| `apptest.example.com`      | `127.0.0.1:8003`      | landing   |
-| `app.apptest.example.com`  | `127.0.0.1:8002`      | web (SPA) |
-| `app.apptest.example.com/api/*` and `/uploads/*` | `127.0.0.1:8001` | api |
+| `betapod.io`      | `127.0.0.1:8003`      | landing   |
+| `app.betapod.io`  | `127.0.0.1:8002`      | web (SPA) |
+| `app.betapod.io/api/*` and `/uploads/*` | `127.0.0.1:8001` | api |
 
 Routing `/api/*` and `/uploads/*` through the same hostname as the SPA keeps
 cookies first-party — no CORS, no SameSite drama.
 
 ## One-time setup on the VPS
 
-1. **DNS**: point `apptest.example.com` and `app.apptest.example.com` at the VM.
+1. **DNS**: point `betapod.io` and `app.betapod.io` at the VM.
 2. **Clone repo** somewhere outside `/home/cloudpanel-site-user/htdocs` (e.g. `/opt/apptest`):
    ```bash
    sudo mkdir -p /opt && sudo chown $USER:$USER /opt
@@ -40,23 +40,23 @@ cookies first-party — no CORS, no SameSite drama.
 
 Create two **Reverse Proxy** sites in CloudPanel.
 
-### Site 1 — landing (`apptest.example.com`)
+### Site 1 — landing (`betapod.io`)
 - Type: **Reverse Proxy**
-- Domain: `apptest.example.com`
+- Domain: `betapod.io`
 - Reverse proxy URL: `http://127.0.0.1:8003`
 - Enable Let's Encrypt → issue certificate
 - (Optional) Force HTTPS redirect
 
-### Site 2 — app (`app.apptest.example.com`)
+### Site 2 — app (`app.betapod.io`)
 - Type: **Reverse Proxy**
-- Domain: `app.apptest.example.com`
+- Domain: `app.betapod.io`
 - Reverse proxy URL: `http://127.0.0.1:8002`  *(the SPA — default fallback)*
 - Enable Let's Encrypt → issue certificate
 
 Then add two extra nginx **location** rules for this site so `/api` and
 `/uploads` reach the FastAPI container instead of the SPA. In CloudPanel:
 
-> Sites → app.apptest.example.com → **Vhost** → edit and add inside the
+> Sites → app.betapod.io → **Vhost** → edit and add inside the
 > `server { ... }` block (above the default `location /`):
 
 ```nginx
@@ -83,8 +83,8 @@ the `/api` prefix before forwarding, so FastAPI sees `/auth/login` not
 Save and CloudPanel reloads nginx. Test:
 
 ```bash
-curl https://app.apptest.example.com/api/health
-curl https://apptest.example.com
+curl https://app.betapod.io/api/health
+curl https://betapod.io
 ```
 
 ## First admin

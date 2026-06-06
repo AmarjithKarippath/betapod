@@ -25,7 +25,10 @@ export function FeedbackModal({ onClose }: { onClose: () => void }) {
         message: message.trim(),
         page_url: window.location.pathname,
       });
-      toast.push("Thanks for the feedback!", "success");
+      toast.push(
+        "Thanks for the feedback! Follow @AmarKarippath on X to support BetaPod.",
+        "success",
+      );
       onClose();
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "Could not submit feedback");

@@ -1,4 +1,4 @@
-# AppTest
+# BetaPod
 
 A marketplace where developers post Play Store closed-testing requests and other devs enroll to test.
 

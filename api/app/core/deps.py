@@ -7,16 +7,16 @@ from app.core.db import get_db
 from app.core.security import decode_access_token
 from app.models import User
 
-COOKIE_NAME = "apptest_session"
+COOKIE_NAME = "betapod_session"
 
 
 def get_current_user(
     db: Session = Depends(get_db),
-    apptest_session: str | None = Cookie(default=None, alias=COOKIE_NAME),
+    session_cookie: str | None = Cookie(default=None, alias=COOKIE_NAME),
 ) -> User:
-    if not apptest_session:
+    if not session_cookie:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Not authenticated")
-    user_id = decode_access_token(apptest_session)
+    user_id = decode_access_token(session_cookie)
     if user_id is None:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid session")
     user = db.get(User, user_id)
@@ -33,11 +33,11 @@ def require_admin(user: User = Depends(get_current_user)) -> User:
 
 def get_optional_user(
     db: Session = Depends(get_db),
-    apptest_session: str | None = Cookie(default=None, alias=COOKIE_NAME),
+    session_cookie: str | None = Cookie(default=None, alias=COOKIE_NAME),
 ) -> User | None:
-    if not apptest_session:
+    if not session_cookie:
         return None
-    user_id = decode_access_token(apptest_session)
+    user_id = decode_access_token(session_cookie)
     if user_id is None:
         return None
     return db.get(User, user_id)

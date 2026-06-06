@@ -170,12 +170,12 @@ export const posts: PostMeta[] = [
     keywords: ["recruit testers niche app", "small audience beta testers", "vertical app testers"],
   },
   {
-    slug: "betafamily-vs-apptest",
-    title: "BetaFamily vs AppTest for the Google Play 12-Tester Rule",
+    slug: "betafamily-vs-betapod",
+    title: "BetaFamily vs BetaPod for the Google Play 12-Tester Rule",
     description: "BetaFamily is a great crowd-testing platform but wasn't built for the 12-tester gate. Here's the honest comparison for indie Android devs.",
     date: "2026-04-08",
     readingMinutes: 4,
-    keywords: ["betafamily vs apptest", "beta family alternative", "google play tester platform comparison"],
+    keywords: ["betafamily vs betapod", "beta family alternative", "google play tester platform comparison"],
   },
   {
     slug: "primetestlab-vs-mutual-testing",

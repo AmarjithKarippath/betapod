@@ -5,7 +5,7 @@ export default function Terms() {
     <main className="max-w-2xl mx-auto px-4 sm:px-6 py-16 prose prose-slate">
       <h1>Terms</h1>
       <p>
-        AppTest is a free, best-effort marketplace. Use it at your own risk.
+        BetaPod is a free, best-effort marketplace. Use it at your own risk.
       </p>
       <p>
         Do not post requests for malware, scams, or apps that violate Google Play policies.

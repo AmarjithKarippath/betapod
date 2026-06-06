@@ -17,7 +17,7 @@ from app.routers import requests as requests_router
 
 setup_logging()
 
-app = FastAPI(title="AppTest API", version="0.1.0")
+app = FastAPI(title="BetaPod API", version="0.1.0")
 
 app.add_middleware(SecurityHeadersMiddleware)
 app.add_middleware(

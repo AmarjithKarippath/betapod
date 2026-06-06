@@ -5,7 +5,7 @@ export default function Privacy() {
     <main className="max-w-2xl mx-auto px-4 sm:px-6 py-16 prose prose-slate">
       <h1>Privacy</h1>
       <p>
-        AppTest stores the minimum needed to run the marketplace: your name, email, and
+        BetaPod stores the minimum needed to run the marketplace: your name, email, and
         password hash; the test requests you create; and which requests you&apos;ve enrolled in.
       </p>
       <p>

@@ -57,8 +57,8 @@ export default async function PostPage({
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
-    author: { "@type": "Organization", name: "AppTest" },
-    publisher: { "@type": "Organization", name: "AppTest" },
+    author: { "@type": "Organization", name: "BetaPod" },
+    publisher: { "@type": "Organization", name: "BetaPod" },
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
   };
 
@@ -99,7 +99,7 @@ export default async function PostPage({
             Skip the work — get 12 testers now
           </h3>
           <p className="mt-2 text-sm text-slate-600">
-            Post a request on AppTest and indie devs will enroll within hours. Free,
+            Post a request on BetaPod and indie devs will enroll within hours. Free,
             no credit card.
           </p>
           <a
@@ -108,6 +108,18 @@ export default async function PostPage({
           >
             Create a free account
           </a>
+          <p className="mt-4 text-xs text-slate-500">
+            BetaPod is free. If it helped, follow{" "}
+            <a
+              href="https://x.com/AmarKarippath"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-700 hover:underline"
+            >
+              @AmarKarippath
+            </a>{" "}
+            on X.
+          </p>
         </aside>
       </article>
     </main>

@@ -11,7 +11,7 @@ def test_register_success_sets_cookie(client):
     body = r.json()
     assert body["email"] == "alice@example.com"
     assert body["name"] == "Alice"
-    assert "apptest_session" in r.cookies
+    assert "betapod_session" in r.cookies
 
 
 def test_register_duplicate_email_rejected(client):
@@ -38,7 +38,7 @@ def test_login_success(client):
         json={"email": "alice@example.com", "password": "hunter2hunter"},
     )
     assert r.status_code == 200
-    assert "apptest_session" in r.cookies
+    assert "betapod_session" in r.cookies
 
 
 def test_login_wrong_password_generic_error(client):

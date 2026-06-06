@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { FeedbackModal } from "@/components/FeedbackModal";
+import { FollowBanner } from "@/components/FollowBanner";
 
 export function Layout() {
   const { user, logout } = useAuth();
@@ -18,7 +19,7 @@ export function Layout() {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
           <Link to="/" className="font-bold text-lg text-brand-600">
-            AppTest
+            BetaPod
           </Link>
           <nav className="flex items-center gap-2 sm:gap-4 text-sm">
             <NavLink
@@ -78,6 +79,7 @@ export function Layout() {
           </nav>
         </div>
       </header>
+      <FollowBanner />
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6">
         <Outlet />
       </main>

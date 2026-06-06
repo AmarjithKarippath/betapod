@@ -55,7 +55,10 @@ export function CreateRequestPage() {
         }
       }
 
-      toast.push("Request created!", "success");
+      toast.push(
+        "Request created! If BetaPod helped, follow @AmarKarippath on X — that's the only ask.",
+        "success",
+      );
       navigate(`/requests/${req.id}`);
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "Could not create request");

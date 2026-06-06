@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://apptest.example.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://betapod.io";
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:5173";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Find 12 Google Play Testers in Hours — Free | AppTest",
-    template: "%s · AppTest",
+    default: "Find 12 Google Play Testers in Hours — Free | BetaPod",
+    template: "%s · BetaPod",
   },
   description:
     "Get the 12 active testers Google Play requires for closed testing. Indie devs help each other ship to production in 14 days. Free, no waitlist, no paid test farms.",
@@ -26,17 +26,17 @@ export const metadata: Metadata = {
     "mutual app testing",
   ],
   openGraph: {
-    title: "Find 12 Google Play Testers in Hours — Free | AppTest",
+    title: "Find 12 Google Play Testers in Hours — Free | BetaPod",
     description:
       "Get the 12 active testers Google Play requires for closed testing. Indie devs help each other ship to production in 14 days.",
     url: SITE_URL,
-    siteName: "AppTest",
+    siteName: "BetaPod",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Find 12 Google Play Testers in Hours — Free | AppTest",
+    title: "Find 12 Google Play Testers in Hours — Free | BetaPod",
     description:
       "The free marketplace where indie Android devs swap closed testing. No paid test farms.",
   },
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
             <a href="/" className="font-bold text-lg text-brand-600">
-              AppTest
+              BetaPod
             </a>
             <nav className="flex items-center gap-4 text-sm">
               <a href="/#how-it-works" className="text-slate-600 hover:text-slate-900">
@@ -80,8 +80,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         {children}
         <footer className="border-t border-slate-200 mt-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-slate-500 flex flex-col sm:flex-row justify-between gap-2">
-            <span>© {new Date().getFullYear()} AppTest. Built by indie devs.</span>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-sm text-slate-500 flex flex-col sm:flex-row justify-between gap-3">
+            <span>
+              © {new Date().getFullYear()} BetaPod. Free to use — follow{" "}
+              <a
+                href="https://x.com/AmarKarippath"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-700 hover:text-slate-900 underline"
+              >
+                @AmarKarippath
+              </a>{" "}
+              on X to support the project.
+            </span>
             <span>
               <a href="/privacy" className="hover:text-slate-900">
                 Privacy

@@ -48,7 +48,7 @@ function GooglePlay12TestersGuide() {
         The 12-tester rule is annoying but not hard if you stack the deck early: recruit
         15 instead of 12, brief them clearly, and check the tester report twice during
         the window. Indie-dev <a href="/">mutual testing</a> is the cheapest and most
-        reliable source — that&apos;s exactly why we built AppTest.
+        reliable source — that&apos;s exactly why we built BetaPod.
       </p>
     </>
   );
@@ -64,7 +64,7 @@ function Find12Testers24Hours() {
       </p>
       <h2>Same-day options</h2>
       <ul>
-        <li><strong><a href="/">AppTest</a></strong> — post a request, indie devs enroll within hours because they need testers too.</li>
+        <li><strong><a href="/">BetaPod</a></strong> — post a request, indie devs enroll within hours because they need testers too.</li>
         <li><strong>r/TestersCommunity</strong> on Reddit — pinned swap threads, no karma gate.</li>
         <li><strong>Indie Hackers Telegram and Discord</strong> — search &ldquo;testers&rdquo; in the past week.</li>
       </ul>
@@ -455,7 +455,7 @@ function FindTestersTargetCountry() {
       </p>
       <h2>By region</h2>
       <ul>
-        <li><strong>India</strong> — r/AndroidDevIndia, Telegram &ldquo;Indian Indie Devs&rdquo;, AppTest filtered by India.</li>
+        <li><strong>India</strong> — r/AndroidDevIndia, Telegram &ldquo;Indian Indie Devs&rdquo;, BetaPod filtered by India.</li>
         <li><strong>EU</strong> — r/AndroidDev, ProductHunt &ldquo;Help Wanted&rdquo;, Mastodon #IndieDev tag.</li>
         <li><strong>SEA</strong> — Facebook groups &ldquo;Vietnam Android Developers&rdquo;, &ldquo;PH Indie Devs&rdquo;.</li>
         <li><strong>LATAM</strong> — Discord &ldquo;LatAm Android&rdquo;, Twitter accounts of regional Android Google Developer Groups.</li>
@@ -466,7 +466,7 @@ function FindTestersTargetCountry() {
         keyboard input, a Belgian or Canadian tester works as well as a French one.
         Phrase your ask by language when possible.
       </p>
-      <h2>On AppTest</h2>
+      <h2>On BetaPod</h2>
       <p>
         The location field on every <a href="/">request tile</a> is filterable.
         Set it to &ldquo;India&rdquo; or &ldquo;EU&rdquo; or any other region when
@@ -684,7 +684,7 @@ function RecruitTestersNicheApps() {
       </p>
       <h2>The two-cohort approach</h2>
       <ol>
-        <li><strong>Gate cohort:</strong> 12+ generic indie devs from <a href="/">AppTest</a> or Reddit. Job: satisfy Google&apos;s rule.</li>
+        <li><strong>Gate cohort:</strong> 12+ generic indie devs from <a href="/">BetaPod</a> or Reddit. Job: satisfy Google&apos;s rule.</li>
         <li><strong>Feedback cohort:</strong> 3–5 in-niche users you recruited via niche communities, forums, or DMs. Job: give you signal.</li>
       </ol>
       <h2>Where to find the niche cohort</h2>
@@ -697,11 +697,11 @@ function RecruitTestersNicheApps() {
   );
 }
 
-function BetafamilyVsApptest() {
+function BetafamilyVsBetapod() {
   return (
     <>
       <p>
-        Honest comparison: BetaFamily and AppTest solve adjacent but different
+        Honest comparison: BetaFamily and BetaPod solve adjacent but different
         problems. Picking the wrong one wastes weeks.
       </p>
       <h2>BetaFamily</h2>
@@ -711,7 +711,7 @@ function BetafamilyVsApptest() {
         <li>Not optimized for: the 12-tester / 14-day Play gate specifically.</li>
         <li>Pricing: paid plans for full features.</li>
       </ul>
-      <h2>AppTest</h2>
+      <h2>BetaPod</h2>
       <ul>
         <li>Built specifically for the Google Play 12-tester rule.</li>
         <li>Best for: mutual swap testing among indie Android devs.</li>
@@ -721,7 +721,7 @@ function BetafamilyVsApptest() {
       <h2>Use both, for different reasons</h2>
       <p>
         BetaFamily is excellent when you want a UX report from a wide range of
-        users. AppTest is the fast lane when you need 12 active testers
+        users. BetaPod is the fast lane when you need 12 active testers
         <em>this week</em> to unlock production. They aren&apos;t competitors so
         much as different stages of your launch.
       </p>
@@ -755,7 +755,7 @@ function PrimeTestLabVsMutualTesting() {
       <p>
         If your time costs more than $30/hour and you&apos;re in a rush:
         PrimeTestLab. If you have any flexibility and want a sustainable approach
-        for app two, three, four: mutual via <a href="/">AppTest</a> or similar.
+        for app two, three, four: mutual via <a href="/">BetaPod</a> or similar.
       </p>
     </>
   );
@@ -817,7 +817,7 @@ function FiverrTestersRejected() {
       </ul>
       <h2>What to do instead</h2>
       <p>
-        Free mutual testing via <a href="/">AppTest</a> is the lowest-risk
+        Free mutual testing via <a href="/">BetaPod</a> is the lowest-risk
         replacement. Paid services with verified account hygiene (look for
         independent reviews on r/AndroidDev) are acceptable if you&apos;ve
         exhausted the free route.
@@ -856,7 +856,7 @@ function FreeVsPaidTesters() {
       </ul>
       <h2>Recommended sequence</h2>
       <p>
-        Try free mutual first (<a href="/">AppTest</a>). If you don&apos;t hit 12
+        Try free mutual first (<a href="/">BetaPod</a>). If you don&apos;t hit 12
         within 72 hours, layer in Reddit. Only go paid if you&apos;ve genuinely
         exhausted both.
       </p>
@@ -917,7 +917,7 @@ function UserTestingVsMutualTesting() {
       <h2>What to use for what</h2>
       <p>
         Use UserTesting for usability sessions on your live app post-launch. Use
-        a mutual-testing community like <a href="/">AppTest</a> to clear the
+        a mutual-testing community like <a href="/">BetaPod</a> to clear the
         12-tester gate. Different jobs, different tools.
       </p>
     </>
@@ -1512,7 +1512,7 @@ function AndroidOnABudget() {
       <ul>
         <li>Plausible $9/month — privacy-friendly web analytics.</li>
         <li>Buffer free — schedule X posts.</li>
-        <li><a href="/">AppTest</a> — free testers.</li>
+        <li><a href="/">BetaPod</a> — free testers.</li>
       </ul>
     </>
   );
@@ -1745,7 +1745,7 @@ export const POST_BODIES: Record<string, ComponentType> = {
   "extend-closed-testing-after-production": ExtendClosedTestingAfterProduction,
   "recover-from-dropped-testers": RecoverFromDroppedTesters,
   "recruit-testers-niche-apps": RecruitTestersNicheApps,
-  "betafamily-vs-apptest": BetafamilyVsApptest,
+  "betafamily-vs-betapod": BetafamilyVsBetapod,
   "primetestlab-vs-mutual-testing": PrimeTestLabVsMutualTesting,
   "paid-google-play-testers-worth-it": PaidGooglePlayTestersWorthIt,
   "fiverr-testers-rejected": FiverrTestersRejected,
