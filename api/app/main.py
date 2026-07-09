@@ -35,8 +35,17 @@ app.include_router(feedback_router.router)
 app.include_router(admin_router.router)
 
 _upload_dir = Path(settings.upload_dir)
-_upload_dir.mkdir(parents=True, exist_ok=True)
-app.mount("/uploads", StaticFiles(directory=str(_upload_dir)), name="uploads")
+try:
+    _upload_dir.mkdir(parents=True, exist_ok=True)
+except OSError:
+    # Volume may not be writable until the entrypoint chowns it; StaticFiles
+    # still mounts with check_dir=False so the app can start.
+    pass
+app.mount(
+    "/uploads",
+    StaticFiles(directory=str(_upload_dir), check_dir=False),
+    name="uploads",
+)
 
 
 @app.get("/health")

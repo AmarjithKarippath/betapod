@@ -60,15 +60,18 @@ Then add two extra nginx **location** rules for this site so `/api` and
 > `server { ... }` block (above the default `location /`):
 
 ```nginx
-location /api/ {
+# ^~ wins over any regex location that matches image extensions
+# (e.g. \.(png|jpg|webp)$), which would otherwise serve from the SPA root.
+location ^~ /api/ {
     proxy_pass http://127.0.0.1:8001/;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
+    client_max_body_size 10m;
 }
 
-location /uploads/ {
+location ^~ /uploads/ {
     proxy_pass http://127.0.0.1:8001/uploads/;
     proxy_set_header Host $host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -84,6 +87,7 @@ Save and CloudPanel reloads nginx. Test:
 
 ```bash
 curl https://app.betapod.io/api/health
+curl -I https://app.betapod.io/uploads/<a-known-filename>.jpg
 curl https://betapod.io
 ```
 

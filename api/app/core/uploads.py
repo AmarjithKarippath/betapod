@@ -13,7 +13,13 @@ EXT_FOR_FORMAT = {"JPEG": ".jpg", "PNG": ".png", "WEBP": ".webp"}
 
 def _ensure_upload_dir() -> Path:
     p = Path(settings.upload_dir)
-    p.mkdir(parents=True, exist_ok=True)
+    try:
+        p.mkdir(parents=True, exist_ok=True)
+    except OSError as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Upload storage is not writable",
+        ) from e
     return p
 
 
@@ -53,6 +59,12 @@ def save_screenshot(upload: UploadFile) -> str:
     save_kwargs: dict = {"optimize": True} if src_format in ("JPEG", "PNG") else {}
     buf = io.BytesIO()
     img.save(buf, format=src_format, **save_kwargs)
-    out_path.write_bytes(buf.getvalue())
+    try:
+        out_path.write_bytes(buf.getvalue())
+    except OSError as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to store screenshot",
+        ) from e
 
     return f"/uploads/{filename}"

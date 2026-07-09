@@ -9,6 +9,7 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq5 \
     curl \
+    gosu \
   && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
@@ -16,8 +17,12 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
-USER appuser
+RUN useradd -m -u 1000 appuser \
+  && chown -R appuser:appuser /app \
+  && chmod +x /app/docker-entrypoint.sh
 
+# Stay root for the entrypoint so it can chown the uploads volume, then
+# drop to appuser via gosu before running the app.
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
 EXPOSE 8000
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
