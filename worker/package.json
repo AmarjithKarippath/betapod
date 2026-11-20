@@ -1,0 +1,25 @@
+{
+  "name": "betapod-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "npm --prefix ../web run build && wrangler deploy",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "drizzle-orm": "^0.45.4",
+    "hono": "^4.13.19",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "^1.8.5",
+    "@cloudflare/workers-types": "^5.20261120.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1",
+    "wrangler": "^4.165.0"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "betapod-app",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // SPA built by `npm --prefix ../web run build`. The Worker only runs for
+  // /api/* and /uploads/*; everything else is served from assets, with
+  // index.html as the fallback for client-side routes.
+  "assets": {
+    "directory": "../web/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/uploads/*"]
+  },
+
+  // App data (users, listing requests, enrollments, feedback).
+  // Schema lives in ./migrations — apply with:
+  //   npx wrangler d1 migrations apply betapod-db --remote   (or --local)
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "betapod-db",
+      "database_id": "ff849cce-f5bd-477c-b128-65e6935b2d3e",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  "r2_buckets": [{ "binding": "UPLOADS", "bucket_name": "betapod-uploads" }],
+
+  "images": { "binding": "IMAGES" },
+
+  "durable_objects": {
+    "bindings": [{ "name": "RATE_LIMITER", "class_name": "RateLimiter" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RateLimiter"] }],
+
+  // Secrets (set with `npx wrangler secret put API_SECRET_KEY`):
+  //   API_SECRET_KEY — must equal the old API's value so existing sessions stay valid.
+  "vars": {
+    "API_JWT_EXPIRE_DAYS": "7",
+    "API_COOKIE_SECURE": "true",
+    "API_COOKIE_DOMAIN": ".betapod.io",
+    "API_CORS_ORIGINS": "https://betapod.io,https://app.betapod.io"
+  },
+
+  "workers_dev": true,
+  "routes": [{ "pattern": "app.betapod.io", "custom_domain": true }],
+  "observability": { "enabled": true }
+}

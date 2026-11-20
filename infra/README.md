@@ -1,5 +1,8 @@
 # Deployment (CloudPanel + Docker)
 
+> **Moving to Cloudflare:** see [CLOUDFLARE.md](CLOUDFLARE.md). This file
+> documents the old VPS setup, kept until the cutover is done.
+
 CloudPanel handles TLS, the public-facing reverse proxy, and DNS-level concerns.
 Docker just runs the three app containers + Postgres + Redis on loopback ports.
 

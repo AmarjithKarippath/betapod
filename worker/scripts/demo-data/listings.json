@@ -1,0 +1,246 @@
+{
+  "owners": [
+    {
+      "key": "curated",
+      "name": "BetaPod Curated",
+      "email": "curated@demo.betapod.io"
+    },
+    {
+      "key": "larkspur",
+      "name": "Larkspur Labs (demo)",
+      "email": "larkspur@demo.betapod.io"
+    },
+    {
+      "key": "mintgrove",
+      "name": "Mintgrove Studio (demo)",
+      "email": "mintgrove@demo.betapod.io"
+    },
+    {
+      "key": "copperfield",
+      "name": "Copperfield Apps (demo)",
+      "email": "copperfield@demo.betapod.io"
+    }
+  ],
+  "listings": [
+    {
+      "owner": "curated",
+      "image": "thunderbird.png",
+      "app_name": "Thunderbird Beta for Testers",
+      "category": "Communication",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=net.thunderbird.android.beta",
+      "description": "Thunderbird is a 100% open source, privacy focused email app.\n\nCurated listing: Thunderbird Beta for Testers is an open-source project by MZLA Technologies (Thunderbird). BetaPod is not affiliated with its developers. This is Thunderbird's official beta app on Google Play: install it to test upcoming releases and report issues at https://github.com/thunderbird/thunderbird-android/issues\n\nScreenshot: MZLA Technologies (Thunderbird), Apache-2.0, from https://github.com/thunderbird/thunderbird-android"
+    },
+    {
+      "owner": "curated",
+      "image": "wikipedia.png",
+      "app_name": "Wikipedia Beta",
+      "category": "Books & Reference",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=org.wikipedia.beta",
+      "description": "The official app for Wikipedia, the world’s largest source of information.\n\nCurated listing: Wikipedia Beta is an open-source project by Wikimedia Foundation. BetaPod is not affiliated with its developers. This is the Wikimedia Foundation's official beta app on Google Play: install it to try new features before they ship.\n\nScreenshot: Wikimedia Foundation, Apache-2.0, from https://github.com/wikimedia/apps-android-wikipedia"
+    },
+    {
+      "owner": "curated",
+      "image": "keepassdx.png",
+      "app_name": "KeePassDX",
+      "category": "Tools",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.kunzisoft.keepass.free",
+      "description": "Manage passkeys and passwords in a local, open-source vault.\n\nCurated listing: KeePassDX is an open-source project by Kunzisoft. BetaPod is not affiliated with its developers. To help, install the app from Google Play and report bugs on the project's issue tracker: https://github.com/Kunzisoft/KeePassDX/issues\n\nScreenshot: Kunzisoft, GPL-3.0, from https://github.com/Kunzisoft/KeePassDX"
+    },
+    {
+      "owner": "curated",
+      "image": "aegis.png",
+      "app_name": "Aegis Authenticator",
+      "category": "Tools",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.beemdevelopment.aegis",
+      "description": "Free, secure and open source 2FA app to manage tokens for your online services.\n\nCurated listing: Aegis Authenticator is an open-source project by Beem Development. BetaPod is not affiliated with its developers. To help, install the app from Google Play and report bugs on the project's issue tracker: https://github.com/beemdevelopment/Aegis/issues\n\nScreenshot: Beem Development, GPL-3.0, from https://github.com/beemdevelopment/Aegis"
+    },
+    {
+      "owner": "curated",
+      "image": "mastodon.png",
+      "app_name": "Mastodon",
+      "category": "Social",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=org.joinmastodon.android",
+      "description": "The official Mastodon app for Android: where conversations happen.\n\nCurated listing: Mastodon is an open-source project by Mastodon gGmbH. BetaPod is not affiliated with its developers. To help, install the app from Google Play and report bugs on the project's issue tracker: https://github.com/mastodon/mastodon-android/issues\n\nScreenshot: Mastodon gGmbH, GPL-3.0, from https://github.com/mastodon/mastodon-android"
+    },
+    {
+      "owner": "curated",
+      "image": "duckduckgo.jpg",
+      "app_name": "DuckDuckGo Browser",
+      "category": "Communication",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android",
+      "description": "A privacy-focused web browser with built-in private search and tracker blocking.\n\nCurated listing: DuckDuckGo Browser is an open-source project by DuckDuckGo. BetaPod is not affiliated with its developers. To help, install the app from Google Play and report bugs on the project's issue tracker: https://github.com/duckduckgo/Android/issues\n\nScreenshot: DuckDuckGo, Apache-2.0, from https://github.com/duckduckgo/Android"
+    },
+    {
+      "owner": "curated",
+      "image": "ankidroid.png",
+      "app_name": "AnkiDroid Flashcards",
+      "category": "Education",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.ichi2.anki",
+      "description": "Memorize anything with AnkiDroid! Spaced-repetition flashcards, compatible with Anki.\n\nCurated listing: AnkiDroid Flashcards is an open-source project by the AnkiDroid Open Source Team. BetaPod is not affiliated with its developers. To help, install the app from Google Play and report bugs on the project's issue tracker: https://github.com/ankidroid/Anki-Android/issues\n\nScreenshot: the AnkiDroid Open Source Team, GPL-3.0, from https://github.com/ankidroid/Anki-Android"
+    },
+    {
+      "owner": "curated",
+      "image": "homeassistant.png",
+      "app_name": "Home Assistant",
+      "category": "House & Home",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.homeassistant.companion.android",
+      "description": "The official app for Home Assistant. Control your home anywhere in the world.\n\nCurated listing: Home Assistant is an open-source project by Home Assistant (Open Home Foundation). BetaPod is not affiliated with its developers. To help, install the app from Google Play and report bugs on the project's issue tracker: https://github.com/home-assistant/android/issues\n\nScreenshot: Home Assistant (Open Home Foundation), Apache-2.0, from https://github.com/home-assistant/android"
+    },
+    {
+      "owner": "curated",
+      "image": "catima.png",
+      "app_name": "Catima Loyalty Card Wallet",
+      "category": "Lifestyle",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=me.hackerchick.catima",
+      "description": "For your barcodes, memberships, loyalty programs, coupons and tickets.\n\nCurated listing: Catima Loyalty Card Wallet is an open-source project by the Catima contributors. BetaPod is not affiliated with its developers. To help, install the app from Google Play and report bugs on the project's issue tracker: https://github.com/CatimaLoyalty/Android/issues\n\nScreenshot: the Catima contributors, GPL-3.0, from https://github.com/CatimaLoyalty/Android"
+    },
+    {
+      "owner": "curated",
+      "image": "feeder.png",
+      "app_name": "Feeder",
+      "category": "News & Magazines",
+      "location": "Worldwide",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=com.nononsenseapps.feeder.play",
+      "description": "An awesome libre and open source RSS feed reader.\n\nCurated listing: Feeder is an open-source project by Jonas Kalderstam (spacecowboy). BetaPod is not affiliated with its developers. To help, install the app from Google Play and report bugs on the project's issue tracker: https://github.com/spacecowboy/Feeder/issues\n\nScreenshot: Jonas Kalderstam (spacecowboy), GPL-3.0, from https://github.com/spacecowboy/Feeder"
+    },
+    {
+      "owner": "larkspur",
+      "image": "pebblepath.png",
+      "app_name": "Pebblepath: Habit Trails",
+      "category": "Productivity",
+      "location": "UK",
+      "tester_count": 12,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.pebblepath",
+      "description": "Build habits one small step at a time. Track streaks, set gentle reminders and see your progress as a trail. Looking for testers to try the new streak-recovery feature and evening reminders.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "larkspur",
+      "image": "tidepool.png",
+      "app_name": "Tidepool Budget",
+      "category": "Finance",
+      "location": "UK",
+      "tester_count": 15,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.tidepool",
+      "description": "A calm monthly budgeting app with envelope-style categories. We need testers who use a budget every week to check category rollovers and the new savings goals screen.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "larkspur",
+      "image": "hushnote.png",
+      "app_name": "Hushnote Journal",
+      "category": "Lifestyle",
+      "location": "Australia",
+      "tester_count": 12,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.hushnote",
+      "description": "A private, offline journal with daily prompts and mood tracking. Please test the new mood-trend charts and the encrypted backup flow.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "mintgrove",
+      "image": "fernlight.png",
+      "app_name": "Fernlight Plant Care",
+      "category": "Lifestyle",
+      "location": "India",
+      "tester_count": 14,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.fernlight",
+      "description": "Watering schedules and light advice for your houseplants. Testers with 3+ plants wanted to check reminder timing and the plant identification beta.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "mintgrove",
+      "image": "lumenlexicon.png",
+      "app_name": "Lumen Lexicon",
+      "category": "Education",
+      "location": "Germany",
+      "tester_count": 20,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.lumenlexicon",
+      "description": "Vocabulary trainer with spaced repetition and a word of the day. Looking for language learners to test the new German and Spanish decks.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "mintgrove",
+      "image": "bramble.png",
+      "app_name": "Brisket & Bramble Recipes",
+      "category": "Food & Drink",
+      "location": "US",
+      "tester_count": 12,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.bramble",
+      "description": "Seasonal comfort-food recipes with step-by-step timers and a smart shopping list. Help us test the timers and shopping-list sync.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "copperfield",
+      "image": "orbitrun.png",
+      "app_name": "Orbitrun",
+      "category": "Games",
+      "location": "Brazil",
+      "tester_count": 25,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.orbitrun",
+      "description": "A one-thumb space runner across hand-made sectors with a new daily challenge every day. We need players on older phones to check performance.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "copperfield",
+      "image": "kestrel.png",
+      "app_name": "Kestrel Commute",
+      "category": "Maps & Navigation",
+      "location": "Canada",
+      "tester_count": 15,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.kestrel",
+      "description": "Live departures, delay alerts and bike-share availability for your daily commute. Testers who commute by public transport wanted.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "copperfield",
+      "image": "parcelpine.png",
+      "app_name": "Parcelpine Tracker",
+      "category": "Tools",
+      "location": "Netherlands",
+      "tester_count": 12,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.parcelpine",
+      "description": "Track all your deliveries in one place with automatic carrier detection. Please test adding tracking numbers and delivery notifications.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    },
+    {
+      "owner": "copperfield",
+      "image": "stridewell.png",
+      "app_name": "Stridewell Run Coach",
+      "category": "Health & Fitness",
+      "location": "Kenya",
+      "tester_count": 18,
+      "duration_days": 14,
+      "play_store_url": "https://play.google.com/store/apps/details?id=io.betapod.demo.stridewell",
+      "description": "Adaptive running plans from 5K to marathon, with interval coaching. Runners training for a race wanted to test the new half-marathon plan.\n\nDemo listing: this is a fictional sample app created to showcase BetaPod. It is not published on Google Play and has no real developer."
+    }
+  ]
+}

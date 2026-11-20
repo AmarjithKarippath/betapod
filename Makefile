@@ -42,3 +42,21 @@ lint:
 
 clean:
 	docker compose down -v
+
+# --- Cloudflare (worker/ = API + SPA, landing/ = OpenNext) ---
+.PHONY: worker-install worker-dev worker-test cf-deploy
+
+worker-install:
+	cd worker && npm install
+	cd web && npm install
+
+worker-dev:
+	cd web && npm run build
+	cd worker && npx wrangler d1 migrations apply betapod-db --local && npx wrangler dev
+
+worker-test:
+	cd worker && npx tsc --noEmit && npx vitest run
+
+cf-deploy:
+	cd worker && npm run deploy
+	cd landing && npm run cf:deploy

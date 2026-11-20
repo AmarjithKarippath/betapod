@@ -1,0 +1,7 @@
+{
+  "argon2_hash": "$argon2id$v=19$m=65536,t=3,p=4$3bS/rky2kjTgkIfCjtQHxw$4tuqqYZThjNjiO9UpzDfRAvimnp7blM/7a+NHlc+cxs",
+  "password": "hunter2hunter",
+  "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MiIsImlhdCI6MTc5NTE4NzA0NCwiZXhwIjoyMTEwNTQ3MDQ0fQ.6tiSqTEVncsXVcpSN1KNKeDZAruVz6U_rYAjF1-DqQM",
+  "jwt_secret": "compat-secret",
+  "jwt_user_id": 42
+}
