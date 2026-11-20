@@ -10,6 +10,7 @@ import { admin } from "./routes/admin";
 import { auth } from "./routes/auth";
 import { feedback } from "./routes/feedback";
 import { requests } from "./routes/requests";
+import { sharePages } from "./routes/share";
 import { uploads } from "./routes/uploads";
 
 // From api/app/core/middleware.py.
@@ -80,9 +81,10 @@ export function createApp(openDb: (env: Env) => DbHandle) {
     console.error("unhandled error", err);
     return c.json({ detail: "Internal Server Error" }, 500);
   });
-  // Only /api/* and /uploads/* reach the Worker (run_worker_first).
+  // Only /api/*, /uploads/* and /requests/* reach the Worker (run_worker_first).
   app.notFound((c) => c.json({ detail: "Not Found" }, 404));
   app.route("/api", api);
   app.route("/uploads", uploads);
+  app.route("/requests", sharePages(openDb));
   return app;
 }

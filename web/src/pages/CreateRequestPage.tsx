@@ -55,11 +55,8 @@ export function CreateRequestPage() {
         }
       }
 
-      toast.push(
-        "Request created! If BetaPod helped, follow @AmarKarippath on X — that's the only ask.",
-        "success",
-      );
-      navigate(`/requests/${req.id}`);
+      // The detail page opens the share popup (which also carries the follow ask).
+      navigate(`/requests/${req.id}`, { state: { justCreated: true } });
     } catch (err) {
       setError(err instanceof ApiError ? err.message : "Could not create request");
     } finally {

@@ -6,13 +6,14 @@
   "compatibility_flags": ["nodejs_compat"],
 
   // SPA built by `npm --prefix ../web run build`. The Worker only runs for
-  // /api/* and /uploads/*; everything else is served from assets, with
+  // /api/*, /uploads/* and /requests/* (the latter to inject per-listing
+  // social preview tags); everything else is served from assets, with
   // index.html as the fallback for client-side routes.
   "assets": {
     "directory": "../web/dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    "run_worker_first": ["/api/*", "/uploads/*"]
+    "run_worker_first": ["/api/*", "/uploads/*", "/requests/*"]
   },
 
   // App data (users, listing requests, enrollments, feedback).

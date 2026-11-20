@@ -1,8 +1,10 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Link, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { api, ApiError } from "@/lib/api";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/useToast";
+import { ShareModal } from "@/components/ShareModal";
 import type { Enrollment, TestRequest } from "@/types/api";
 
 export function RequestDetailPage() {
@@ -10,6 +12,17 @@ export function RequestDetailPage() {
   const { user } = useAuth();
   const toast = useToast();
   const qc = useQueryClient();
+  const location = useLocation();
+  const navigate = useNavigate();
+  // Set by CreateRequestPage so the share popup opens right after creation.
+  const justCreated = !!(location.state as { justCreated?: boolean } | null)?.justCreated;
+  const [shareOpen, setShareOpen] = useState(justCreated);
+
+  const closeShare = () => {
+    setShareOpen(false);
+    // Drop the flag so a refresh or back-navigation doesn't reopen the popup.
+    if (justCreated) navigate(location.pathname, { replace: true, state: null });
+  };
 
   const { data: req, isLoading } = useQuery({
     queryKey: ["request", id],
@@ -95,13 +108,18 @@ export function RequestDetailPage() {
             {req.play_store_url}
           </a>
 
-          <div className="pt-4 border-t border-slate-200">
+          <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
             {!user ? (
               <Link to="/login" className="btn-primary">
                 Log in to enroll
               </Link>
             ) : req.is_owner ? (
-              <div className="text-sm text-slate-500">This is your request.</div>
+              <div className="flex flex-wrap items-center gap-3">
+                <button onClick={() => setShareOpen(true)} className="btn-primary">
+                  Share to get testers
+                </button>
+                <span className="text-sm text-slate-500">This is your request.</span>
+              </div>
             ) : req.is_enrolled ? (
               <button
                 onClick={() => unenroll.mutate()}
@@ -119,9 +137,18 @@ export function RequestDetailPage() {
                 {full ? "Full" : enroll.isPending ? "…" : "Enroll as tester"}
               </button>
             )}
+            {!req.is_owner && (
+              <button onClick={() => setShareOpen(true)} className="btn-secondary">
+                Share
+              </button>
+            )}
           </div>
         </div>
       </div>
+
+      {shareOpen && (
+        <ShareModal req={req} justCreated={justCreated && req.is_owner} onClose={closeShare} />
+      )}
 
       {req.is_owner && enrollments && (
         <div className="card p-6">
