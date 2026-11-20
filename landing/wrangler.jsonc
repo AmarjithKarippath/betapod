@@ -6,6 +6,10 @@
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
   "workers_dev": true,
-  "routes": [{ "pattern": "betapod.io", "custom_domain": true }],
+  "routes": [
+    { "pattern": "betapod.io", "custom_domain": true },
+    // Redirected to the apex by next.config.mjs.
+    { "pattern": "www.betapod.io", "custom_domain": true }
+  ],
   "observability": { "enabled": true }
 }
