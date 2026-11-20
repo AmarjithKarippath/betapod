@@ -8,8 +8,9 @@
   "workers_dev": true,
   "routes": [
     { "pattern": "betapod.io", "custom_domain": true },
-    // Redirected to the apex by next.config.mjs.
-    { "pattern": "www.betapod.io", "custom_domain": true }
+    // Both redirected by next.config.mjs (to betapod.io / app.betapod.io).
+    { "pattern": "www.betapod.io", "custom_domain": true },
+    { "pattern": "www.app.betapod.io", "custom_domain": true }
   ],
   "observability": { "enabled": true }
 }
