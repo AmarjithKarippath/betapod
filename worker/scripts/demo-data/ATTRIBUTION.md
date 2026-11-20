@@ -28,6 +28,22 @@ All names and logos are trademarks of their respective owners.
 
 The other 10 apps (Pebblepath, Tidepool Budget, Hushnote, Fernlight, Lumen
 Lexicon, Brisket & Bramble, Orbitrun, Kestrel Commute, Parcelpine, Stridewell)
-and their developer accounts are made up. Their screenshots are mockups
-generated for BetaPod and carry a "DEMO APP" badge; their descriptions say they
-are fictional and their Play Store links intentionally don't resolve.
+and their developer accounts are made up. Their descriptions say they are
+fictional, and their Play Store links intentionally don't resolve.
+
+Their images are real photos matching each app's theme (not app
+screenshots), all released under CC0 or into the public domain, found via
+Openverse. Credit is given below although none is required:
+
+| Image | Photo | Creator | License | Source |
+|---|---|---|---|---|
+| pebblepath.jpg | Checklist Goals | Glenn Carstens-Peters | CC0 | https://stocksnap.io/photo/checklist-goals-TBJ9OPDGMK |
+| tidepool.jpg | Piggy Bank | Artsy Crafty | CC0 | https://stocksnap.io/photo/piggy-bank-ZLEVSWFWZC |
+| hushnote.jpg | Journal Notepad | Cathryn Lavery | CC0 | https://stocksnap.io/photo/journal-notepad-DPKNIIN5X3 |
+| fernlight.jpg | Monstera plant | unknown | CC0 | https://www.rawpixel.com/image/5921102/monstera-plant-free-public-domain-cc0-photo |
+| lumenlexicon.jpg | Books Dictionary | Freestocks.org | CC0 | https://stocksnap.io/photo/books-dictionary-U74O1AOW5J |
+| bramble.jpg | Sea Salt Caramel, Banana & Pecan Cake and Apple & Blackberry | Andy Li | CC0 | https://commons.wikimedia.org/w/index.php?curid=177371603 |
+| orbitrun.jpg | Great Carina Nebula Processed.jpg | Dylan O'Donnell, deography.com | CC0 | https://commons.wikimedia.org/w/index.php?curid=62842529 |
+| kestrel.jpg | Kawasaki City Bus S-1017 ISUZU ERGA HYBRID 2SG-HL2ANBD | NatsufruAme | CC0 | https://commons.wikimedia.org/w/index.php?curid=105254054 |
+| parcelpine.jpg | Cardboard Box | Matt Bango | CC0 | https://stocksnap.io/photo/cardboard-box-USP4WCYPBW |
+| stridewell.jpg | Running Runner | Dave Meier | CC0 | https://stocksnap.io/photo/running-runner-0EEC17A076 |

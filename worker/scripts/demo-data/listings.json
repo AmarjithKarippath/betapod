@@ -134,7 +134,7 @@
     },
     {
       "owner": "larkspur",
-      "image": "pebblepath.png",
+      "image": "pebblepath.jpg",
       "app_name": "Pebblepath: Habit Trails",
       "category": "Productivity",
       "location": "UK",
@@ -145,7 +145,7 @@
     },
     {
       "owner": "larkspur",
-      "image": "tidepool.png",
+      "image": "tidepool.jpg",
       "app_name": "Tidepool Budget",
       "category": "Finance",
       "location": "UK",
@@ -156,7 +156,7 @@
     },
     {
       "owner": "larkspur",
-      "image": "hushnote.png",
+      "image": "hushnote.jpg",
       "app_name": "Hushnote Journal",
       "category": "Lifestyle",
       "location": "Australia",
@@ -167,7 +167,7 @@
     },
     {
       "owner": "mintgrove",
-      "image": "fernlight.png",
+      "image": "fernlight.jpg",
       "app_name": "Fernlight Plant Care",
       "category": "Lifestyle",
       "location": "India",
@@ -178,7 +178,7 @@
     },
     {
       "owner": "mintgrove",
-      "image": "lumenlexicon.png",
+      "image": "lumenlexicon.jpg",
       "app_name": "Lumen Lexicon",
       "category": "Education",
       "location": "Germany",
@@ -189,7 +189,7 @@
     },
     {
       "owner": "mintgrove",
-      "image": "bramble.png",
+      "image": "bramble.jpg",
       "app_name": "Brisket & Bramble Recipes",
       "category": "Food & Drink",
       "location": "US",
@@ -200,7 +200,7 @@
     },
     {
       "owner": "copperfield",
-      "image": "orbitrun.png",
+      "image": "orbitrun.jpg",
       "app_name": "Orbitrun",
       "category": "Games",
       "location": "Brazil",
@@ -211,7 +211,7 @@
     },
     {
       "owner": "copperfield",
-      "image": "kestrel.png",
+      "image": "kestrel.jpg",
       "app_name": "Kestrel Commute",
       "category": "Maps & Navigation",
       "location": "Canada",
@@ -222,7 +222,7 @@
     },
     {
       "owner": "copperfield",
-      "image": "parcelpine.png",
+      "image": "parcelpine.jpg",
       "app_name": "Parcelpine Tracker",
       "category": "Tools",
       "location": "Netherlands",
@@ -233,7 +233,7 @@
     },
     {
       "owner": "copperfield",
-      "image": "stridewell.png",
+      "image": "stridewell.jpg",
       "app_name": "Stridewell Run Coach",
       "category": "Health & Fitness",
       "location": "Kenya",
